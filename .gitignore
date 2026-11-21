@@ -1,0 +1,41 @@
+# Veeam backup chains and recovery media
+*.vbk
+*.vib
+*.vrb
+*.vbm
+*.iso
+*.img
+
+# Virtual machines, disks, and snapshots
+*.vmx
+*.vmxf
+*.vmdk
+*.nvram
+*.vmem
+*.vmsd
+*.vmsn
+*.vmss
+*.lck
+*.vhd
+*.vhdx
+*.avhd
+*.avhdx
+*.ova
+*.ovf
+
+# Original material and private review records
+/upload/
+/original-evidence/
+/internal-review/
+/university-submissions/
+*-provenance-internal.csv
+
+# Archives and local OS files
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+Thumbs.db
+.DS_Store

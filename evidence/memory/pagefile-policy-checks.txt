@@ -1,0 +1,42 @@
+Windows PowerShell 5.1 paging file checks
+
+Selected output from the lab session. The stage headings and CIM class names identify each reading.
+
+Before the change
+=================
+
+Win32_ComputerSystem
+Name           AutomaticManagedPagefile
+---
+SOFTPLUS-WS-01                     True
+
+Win32_PageFileUsage
+Name            AllocatedBaseSize CurrentUsage PeakUsage
+---
+C:\pagefile.sys              1984           16        16
+
+After restarting with the fixed configuration
+=============================================
+
+Win32_ComputerSystem
+Name           AutomaticManagedPagefile
+---
+SOFTPLUS-WS-01                    False
+
+Win32_PageFileSetting
+Name            InitialSize MaximumSize
+---
+c:\pagefile.sys        4096        4096
+
+Win32_PageFileUsage
+Name            AllocatedBaseSize CurrentUsage PeakUsage
+---
+C:\pagefile.sys              4096            0         0
+
+After restoring automatic management
+====================================
+
+Win32_ComputerSystem
+Name           AutomaticManagedPagefile
+---
+SOFTPLUS-WS-01                     True
